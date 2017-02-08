@@ -1,6 +1,10 @@
 Wikiforia
 =========
 
+FORK
+-----
+Forked to keep anchors in parsed text.
+
 What is it?
 -----------
 It is a library and a tool for parsing Wikipedia XML dumps and converting them into plain text for other tools to use.

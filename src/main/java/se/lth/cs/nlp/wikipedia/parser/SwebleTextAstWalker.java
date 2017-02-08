@@ -207,14 +207,15 @@ public class SwebleTextAstWalker extends AstVisitor<WtNode> {
             sb.append(link.getPrefix());
         }
 
-        if (!link.hasTitle())
-        {
-            iterate(link.getTarget());
-        }
-        else
+        sb.append("[[");
+        if (link.hasTitle())
         {
             iterate(link.getTitle());
+            sb.append("|");
         }
+        iterate(link.getTarget());
+
+        sb.append("]]");
 
         if(!isInsideFilteredSection()) {
             sb.append(link.getPostfix());
