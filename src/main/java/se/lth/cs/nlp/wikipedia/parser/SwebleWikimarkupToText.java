@@ -41,7 +41,9 @@ public class SwebleWikimarkupToText extends SwebleWikimarkupParserBase<Wikipedia
         String text = (String)walker.go(cp.getPage());
         text = text.replaceAll("\\(\\s*\\)", " ");
         text = text.replaceAll(" {2,}", " ");
-        text = text.replaceAll("\n{2,}", "\n\n");
+        text = text.replaceAll("\n{2,}", "\n");
+        text = text.replaceAll("\n", " ");
+        text = text.replaceAll("\\[{2}Image:.+\\]{2}"," ");
         text = trimLineStartFix.matcher(text).replaceAll("");
         text = trimLineEndFix.matcher(text).replaceAll("");
         text = text.trim();

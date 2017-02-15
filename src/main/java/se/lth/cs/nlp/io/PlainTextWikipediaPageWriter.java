@@ -62,6 +62,7 @@ public class PlainTextWikipediaPageWriter implements Sink<WikipediaPage> {
 
             for (WikipediaPage wikipediaPage : batch) {
                 if(wikipediaPage.getText().length() > 0) {
+                    this.fileChannel.write(ByteBuffer.wrap(wikipediaPage.getSignature().getBytes("utf-8")));
                     this.fileChannel.write(ByteBuffer.wrap(wikipediaPage.getText().getBytes("utf-8")));
                     this.fileChannel.write(ByteBuffer.wrap("\n".getBytes("utf-8")));
                 }
