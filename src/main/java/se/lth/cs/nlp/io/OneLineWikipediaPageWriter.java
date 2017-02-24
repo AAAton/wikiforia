@@ -29,7 +29,7 @@ import java.util.List;
  *
  * @author Anton Södergren - karl.aj.sodergren@gmail.com
  */
-public class OnelineWikipediaPageWriter implements Sink<WikipediaPage> {
+public class OneLineWikipediaPageWriter implements Sink<WikipediaPage> {
 
     private final File output;
     private FileChannel fileChannel;
@@ -38,7 +38,7 @@ public class OnelineWikipediaPageWriter implements Sink<WikipediaPage> {
      * Default constructor
      * @param output which file to write to
      */
-    public OnelineWikipediaPageWriter(File output) {
+    public OneLineWikipediaPageWriter(File output) {
         try {
             this.output = output;
 

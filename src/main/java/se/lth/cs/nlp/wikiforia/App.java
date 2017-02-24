@@ -20,7 +20,7 @@ import org.apache.commons.cli.*;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import se.lth.cs.nlp.io.OnelineWikipediaPageWriter;
+import se.lth.cs.nlp.io.OneLineWikipediaPageWriter;
 import se.lth.cs.nlp.io.PlainTextWikipediaPageWriter;
 import se.lth.cs.nlp.io.SimpleHadoopTextWriter;
 import se.lth.cs.nlp.io.XmlWikipediaPageWriter;
@@ -254,7 +254,7 @@ public class App
             if (outputFormat.trim().equalsIgnoreCase(OUTPUT_FORMAT_PLAIN_TEXT))
                     return new PlainTextWikipediaPageWriter(outputPath);
             if (outputFormat.trim().equalsIgnoreCase(OUTPUT_FORMAT_ONE_LINE))
-                return new OnelineWikipediaPageWriter(outputPath);
+                return new OneLineWikipediaPageWriter(outputPath);
         }
         return new XmlWikipediaPageWriter(outputPath);
     }
